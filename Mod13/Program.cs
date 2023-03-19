@@ -50,14 +50,13 @@ namespace Mod13
                     else
                     { //Если повтор есть, то по ключу, чем у насявляется слово, прибавлем счетчик, значение, тем самым считаем повторы
                         slova[word] += 1;
-                    }
-                
+                    }  
             }
             //Сортируем коллекцию и по убыванию и отбираем первые 10 слов
             var sort = slova.OrderByDescending(x => x.Value).Take(10);
             //Для каждого значения отсортированной коллекции выводим пару ключ-значение первых топ 10 повторяющихся слов
             foreach (KeyValuePair<string, int> p in sort)
-                    Console.WriteLine($"{p.Key} = {p.Value}");
+            Console.WriteLine($"{p.Key} = {p.Value}");
         }
 
      }
